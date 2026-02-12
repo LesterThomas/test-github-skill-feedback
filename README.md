@@ -36,18 +36,29 @@ This skill is designed to be used by AI agents that support the Agent Skills for
 
 ## Installation
 
-To use this skill with a compatible AI agent:
+### For Claude Code (Using This Repository Directly)
 
-1. Clone this repository or copy the `skills/feedback/` directory
-2. Place it in your agent's skills directory (e.g., `.claude/skills/` for Claude Code)
-3. The agent will automatically discover and load the skill
-
-### Example for Claude Code
+This repository includes a symbolic link from `.claude/skills` to the `skills/` directory. To use it:
 
 ```bash
 git clone https://github.com/LesterThomas/test-github-skill-feedback.git
-cp -r test-github-skill-feedback/skills/feedback ~/.claude/skills/
+cd test-github-skill-feedback
 ```
+
+Claude Code will automatically discover the skill via the `.claude/skills` symlink.
+
+If the symlink doesn't work on your system, create it manually:
+
+```bash
+cd test-github-skill-feedback
+ln -s ../skills .claude/skills
+```
+
+### For Other AI Agents
+
+1. Clone this repository or copy the `skills/feedback/` directory
+2. Place it in your agent's skills directory
+3. The agent will automatically discover and load the skill
 
 ## License
 
