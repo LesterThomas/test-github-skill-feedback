@@ -9,12 +9,14 @@ This repository contains a 'feedback' skill following the [Agent Skills](https:/
 ## Skill Structure
 
 ```
-feedback/
-├── SKILL.md              # Main skill definition and instructions
-├── scripts/
-│   └── create_feedback.py  # Python script for creating feedback files
-└── references/
-    └── TEMPLATE.md       # Feedback templates for different types
+.claude/
+└── skills/
+    └── feedback/
+        ├── SKILL.md              # Main skill definition and instructions
+        ├── scripts/
+        │   └── create_feedback.py  # Python script for creating feedback files
+        └── references/
+            └── TEMPLATE.md       # Feedback templates for different types
 ```
 
 ## Feedback Types Supported
@@ -35,9 +37,20 @@ This skill is designed to be used by AI agents that support the Agent Skills for
 
 ## Installation
 
-To use this skill with a compatible AI agent:
+### For Claude Code
 
-1. Clone this repository or copy the `feedback/` directory
+Clone this repository to use the skill with Claude Code:
+
+```bash
+git clone https://github.com/LesterThomas/test-github-skill-feedback.git
+cd test-github-skill-feedback
+```
+
+Claude Code will automatically discover the skill in `.claude/skills/feedback/`.
+
+### For Other AI Agents
+
+1. Clone this repository or copy the `.claude/skills/feedback/` directory
 2. Place it in your agent's skills directory
 3. The agent will automatically discover and load the skill
 

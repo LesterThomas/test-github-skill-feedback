@@ -1,5 +1,6 @@
-# Claude Code local files
-.claude/
+# Claude Code local files (but track skills)
+.claude/*
+!.claude/skills/
 
 # Python
 __pycache__/
